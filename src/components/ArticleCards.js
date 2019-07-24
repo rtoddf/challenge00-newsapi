@@ -6,7 +6,11 @@ const ArticleCards = props => {
     return <Card key={index} article={article} />;
   });
 
-  return <div>{articles}</div>;
+  return (
+    <div className="grid" data-col="3">
+      {articles}
+    </div>
+  );
 };
 
 export default ArticleCards;
