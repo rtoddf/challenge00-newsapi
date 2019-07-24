@@ -2,7 +2,7 @@ import React from "react";
 import "./card.css";
 
 const Card = props => {
-  console.log("props.article: ", props.article);
+  // console.log("props.article: ", props.article);
 
   return (
     <article className="panel">

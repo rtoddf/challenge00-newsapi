@@ -1,5 +1,6 @@
 import React from "react";
 import newsapi from "../api/newsapi";
+import SourceSelector from "./SourceSelector";
 import ArticleCards from "./ArticleCards";
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        <SourceSelector />
         <a onClick={this.onSearchSubmit}>news api</a>
         <ArticleCards articles={this.state.articles} />
       </div>
