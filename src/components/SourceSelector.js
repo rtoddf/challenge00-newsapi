@@ -25,6 +25,8 @@ class SourceSelector extends React.Component {
       }
     });
 
+    console.log(sources.data.sources);
+
     this.setState({ sources: sources.data.sources });
   };
 
