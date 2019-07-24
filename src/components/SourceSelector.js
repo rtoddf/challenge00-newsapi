@@ -14,7 +14,7 @@ import SourceOption from "./SourceOption";
 // };
 
 class SourceSelector extends React.Component {
-  state = { sources: [] };
+  state = { sources: [], term: "" };
 
   componentDidMount = async () => {
     // getNewsSources();
@@ -29,7 +29,9 @@ class SourceSelector extends React.Component {
   };
 
   onSelectChange = e => {
-    console.log("change");
+    console.log("change: ", e.target.value);
+
+    this.props.onChange(e.target.value);
   };
 
   render() {

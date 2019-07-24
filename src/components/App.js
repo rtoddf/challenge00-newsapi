@@ -7,9 +7,10 @@ class App extends React.Component {
   state = { articles: [] };
 
   onSearchSubmit = async term => {
+    console.log("term: ", term);
     const response = await newsapi.get("/v2/top-headlines", {
       params: {
-        sources: "cnn"
+        sources: term
       }
     });
 
@@ -19,8 +20,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <SourceSelector />
-        <a onClick={this.onSearchSubmit}>news api</a>
+        <SourceSelector onChange={this.onSearchSubmit} />
+
         <ArticleCards articles={this.state.articles} />
       </div>
     );
