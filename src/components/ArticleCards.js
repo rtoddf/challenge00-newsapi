@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import Card from "./Card";
 
 const ArticleCards = props => {
@@ -7,8 +8,11 @@ const ArticleCards = props => {
   });
 
   return (
-    <div className="grid" data-col="3">
-      {articles}
+    <div>
+      <Header publisher={props.articles[0]} />
+      <div className="grid" data-col="3">
+        {articles}
+      </div>
     </div>
   );
 };

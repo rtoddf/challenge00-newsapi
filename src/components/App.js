@@ -1,10 +1,14 @@
 import React from "react";
-import newsapi from "../api/newsapi";
 import SourceSelector from "./SourceSelector";
 import ArticleCards from "./ArticleCards";
+import newsapi from "../api/newsapi";
 
 class App extends React.Component {
-  state = { articles: [] };
+  state = { articles: [], term: "abc-news" };
+
+  componentDidMount = () => {
+    this.onSearchSubmit(this.state.term);
+  };
 
   onSearchSubmit = async term => {
     const response = await newsapi.get("/v2/top-headlines", {

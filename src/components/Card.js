@@ -1,4 +1,5 @@
 import React from "react";
+import DateTime from "./DateTime";
 import "./card.css";
 
 const Card = props => {
@@ -17,6 +18,9 @@ const Card = props => {
         <a href={props.article.url} target="_blank">
           <h3>{props.article.title}</h3>
         </a>
+        <p>
+          <DateTime publishedAt={props.article.publishedAt} />
+        </p>
         <p>{props.article.description}</p>
       </div>
     </article>

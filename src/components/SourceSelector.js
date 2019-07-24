@@ -38,7 +38,7 @@ class SourceSelector extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="grid">
         <select onChange={this.onSelectChange}>
           <SourceOption sources={this.state.sources} />
         </select>
