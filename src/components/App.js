@@ -18,6 +18,11 @@ class App extends React.Component {
     });
 
     this.setState({ articles: response.data.articles });
+
+    // const thisSource = this.state.sources.filter(src => {
+    //   console.log("this.state.term: ", this.state.term);
+    //   return src.id == this.state.term;
+    // });
   };
 
   render() {

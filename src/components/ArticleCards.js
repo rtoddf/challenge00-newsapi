@@ -8,8 +8,8 @@ const ArticleCards = props => {
   });
 
   return (
-    <div>
-      <Header publisher={props.articles[0]} />
+    <div className="grid">
+      <Header src={props.articles[0]} />
       <div className="grid" data-col="3">
         {articles}
       </div>

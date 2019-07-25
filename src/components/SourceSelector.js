@@ -30,16 +30,10 @@ class SourceSelector extends React.Component {
     this.setState({ sources: sources.data.sources });
   };
 
-  onSelectChange = e => {
-    console.log("change: ", e.target.value);
-
-    this.props.onChange(e.target.value);
-  };
-
   render() {
     return (
       <div className="grid">
-        <select onChange={this.onSelectChange}>
+        <select onChange={e => this.props.onChange(e.target.value)}>
           <SourceOption sources={this.state.sources} />
         </select>
       </div>
